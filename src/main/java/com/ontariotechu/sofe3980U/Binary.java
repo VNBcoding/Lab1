@@ -145,7 +145,6 @@ public class Binary
 				temp.number = num1.number;
 				//shift num1 to the left by the appropriate amount
 				temp = shiftLeft(temp, num2.number.length() - 1 - i);
-				System.out.println(temp.number);
 				result= Binary.add(result,temp);
 			}
 		}

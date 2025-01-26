@@ -1,7 +1,7 @@
 package com.ontariotechu.sofe3980U;
 
 import org.joda.time.LocalTime;
-
+import java.util.*;
 /**
  * Hello world!
  *
@@ -15,12 +15,15 @@ public class App
 	* @param args: not used
 	*/
     public static void main( String[] args )
-    {
+    {	
+		Scanner scan = new Scanner(System.in);
 		LocalTime currentTime = new LocalTime();
 		System.out.println("The current local time is: " + currentTime);
-		Binary binary1=new Binary("101");
+		System.out.println("Please enter your first binary number: ");
+		Binary binary1=new Binary(scan.nextLine());
+		System.out.println("Please enter your second binary number: ");
+		Binary binary2=new Binary(scan.nextLine());
         System.out.println( "First binary number is "+binary1.getValue());
-		Binary binary2=new Binary("10100");
         System.out.println( "Second binary number is "+binary2.getValue());
 		Binary sum= Binary.add(binary1,binary2);
 		System.out.println( "Their summation is "+sum.getValue());
